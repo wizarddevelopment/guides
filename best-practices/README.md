@@ -323,3 +323,14 @@ Angular
 [annotations]: http://robots.thoughtbot.com/avoid-angularjs-dependency-annotation-with-rails
 [ngannotate]: https://github.com/kikonen/ngannotate-rails
 [angular-translate]: https://github.com/angular-translate/angular-translate/wiki/Getting-Started#using-translate-directive
+
+AWS S3
+-------
+
+ * Never use root keys for anything and deactivate them if possible.
+ * Use 2fa if possible for at least the root account
+ * Create users with their own keys for each heroku environment, named after the app
+ * Create groups for each of the app's environments
+ * Create inline policies for each group for the buckets they need to access (actions `s3:*`. buckets `arn:aws:s3:::appname-environment` and `arn:aws:s3:::appname-environment/*`)
+ * Add the corrasponding users to their groups
+ * Create a bucket for each environment `appname-environment` in `US Standard` so it's close to heroku
