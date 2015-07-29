@@ -169,8 +169,8 @@ Postgres
 Background Jobs
 ---------------
 
-* Store IDs, not `ActiveRecord` objects for cleaner serialization, then re-find
-  the `ActiveRecord` object in the `perform` method.
+* Formally we used to have to Store IDs, not `ActiveRecord` objects for cleaner serialization, then re-find the `ActiveRecord` object in the `perform` method. ActiveJob and GlobalID is better solution.
+* Make sure you rescue and re-queue jobs that suffer from heroku terminations.
 
 Email
 -----
