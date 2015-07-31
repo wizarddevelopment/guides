@@ -147,7 +147,7 @@ end
 * Prefer `select` over `find_all`.
 * Prefer `map` over `collect`.
 * Prefer `reduce` over `inject`.
-* Prefer single quotes for strings unless more readable
+* Prefer double quotes over single
 * Prefer `&&` and `||` over `and` and `or`.
 * Prefer `!` over `not`.
 * Prefer `&:method_name` to `{ |item| item.method_name }` for simple method
